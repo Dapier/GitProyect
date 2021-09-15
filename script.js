@@ -10,3 +10,10 @@ function serverRequest(query, callback){
   }
   
   serverRequest("The glass is half ", getResults);
+
+
+  justSayBye = () =>{
+    console.log("Bye");
+}
+
+justSayBye()
