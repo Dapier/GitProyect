@@ -1,0 +1,111 @@
+========== GITHUB course notes =======
+Github its a git repositories hosting service that has code collaboration
+and version control tools for repositories management
+
+
+config gituser, git basic config info
+
+	$ git config --global user.email "yourname"
+	$ git config --global user.email "josuea501@gmail.com"
+	$ git config --list   <--- make sure info verify
+
+Create file in current file
+	$ touch hello_world.py 
+	
+	See all the files inside in dir
+	$ ls
+	
+	Add file if file have mod
+	$ git add <filename>
+
+	Add commit 
+	$ git commit -m "commit"
+
+	Deploy all commits history
+	$ git log
+
+	Compare changes
+	$ git diff
+
+	Remove file from git repo
+	$ git rm <filename>
+	$ git rm -r <directory>
+	
+Git Tags
+	Creat a tag
+	$ git tag <tag-name> 
+	$ git tag   <--show tags
+	$ git tag --list 	<--Shows a list of tags}
+	$ git tag -l "v1*"      <-- Filter
+	Create tag with message/commit
+	$ git tag -a v2.2 -m "Descriptive message of this 2.2 tag"
+
+	Show tag
+	$git show <tag-name>
+	
+	Delete unnecesary tag
+	$ git tag --delete <tag-name>
+
+Create file in git bash
+	$ vi <filename.js>
+
+How to escape from vi and save?
+	1. Press ESC
+	2. write: wq
+
+Restore files
+	$ git restore --staged <filename>
+	or
+	$ git restore <filename>
+
+Reset file from stage, unstaged it
+	$ git reset HEAD <filename>
+
+See content file
+	$ cat <filename>
+
+
+GIT REPOSITORIES
+	how to add files in repo remontly
+	
+	$git remote add origin https://github.com/<username>/<repo-name>
+
+	to push into repo
+	$git push origin <branch> example: master/main
+
+GIT secure, using key generator
+			 <algorithm> 
+	$  ssh-keygen -t rsa -b 4096 -c "josuea501@gmail.com"
+
+	enter to ssh file
+	$ cd ~/.ssh
+
+	adding ssh
+	$ ssh-add <name>
+
+Start auth agent
+	$eval $(ssh-agent -s)
+
+copy ssh
+	$clip < <filename.pub>
+	
+.gitignore
+	special file, can be configure whenever you dont want git track some files
+
+
+
+=====Create branches ====
+	$ git branch "<branchname>"
+
+show all the branches on repo
+	$ git branch 
+
+Move to another branch
+	$ git checkout <branchname>
+
+Update files in another branch
+
+	$ git push origin <branchname>
+	
+
+
